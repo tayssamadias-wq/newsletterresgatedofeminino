@@ -17,11 +17,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            wine: '#2b050d',      
+                            wine: '#2b050d',       
                             wineLight: '#4a0e1c', 
-                            gold: '#C5A059',      
+                            gold: '#C5A059',       
                             goldLight: '#E5C585', 
-                            goldDark: '#9A7B3E',  
+                            goldDark: '#9A7B3E',   
                         }
                     },
                     fontFamily: {
@@ -30,7 +30,6 @@
                     },
                     boxShadow: {
                         'gold-glow': '0 0 30px rgba(197, 160, 89, 0.3)',
-                        'input-focus': '0 0 0 2px rgba(197, 160, 89, 0.5)',
                     },
                     animation: {
                         'pulse-slow': 'pulse 4s infinite',
@@ -48,26 +47,6 @@
     </script>
 
     <style>
-        /* Botão com brilho */
-        .btn-shine {
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-shine::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: 0.6s;
-        }
-        .btn-shine:hover::after {
-            left: 100%;
-        }
-        
-        /* Textura de fundo sutil */
         .bg-texture {
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
         }
@@ -78,24 +57,23 @@
     <main class="min-h-screen flex items-center justify-center relative overflow-hidden p-6">
         
         <div class="absolute inset-0 bg-texture opacity-20 pointer-events-none z-0"></div>
-        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-gold opacity-5 blur-[120px] rounded-full pointer-events-none animate-pulse-slow"></div>
-        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-brand-wineLight opacity-20 blur-[150px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-gold opacity-5 blur-[120px] rounded-full pointer-events-none animate-pulse-slow"></div>
 
-        <div class="relative z-10 max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative z-10 max-w-4xl w-full mx-auto flex flex-col items-center text-center">
             
-            <div class="text-left space-y-8 opacity-0 animate-fade-in-up">
+            <div class="space-y-8 opacity-0 animate-fade-in-up w-full flex flex-col items-center">
                 
                 <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight drop-shadow-xl">
                     Resgate do Feminino — <br>
                     <span class="text-brand-gold italic">A jornada de volta para si mesma.</span>
                 </h1>
 
-                <p class="font-sans text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl">
+                <p class="font-sans text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-xl mx-auto">
                     Toda semana, um ponto de clareza sobre as feridas que sabotam seus relacionamentos — e como cicatrizá-las.
                 </p>
                 
-                <div class="flex items-start gap-4 bg-white/5 border-l-4 border-brand-gold p-5 rounded-r-xl backdrop-blur-sm">
-                    <div class="mt-1">
+                <div class="inline-flex items-start gap-4 bg-white/5 border-l-4 border-brand-gold p-5 rounded-r-xl backdrop-blur-sm max-w-lg mx-auto text-left">
+                    <div class="mt-1 flex-shrink-0">
                         <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div>
@@ -105,8 +83,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="pt-4 max-w-md">
-                    <div class="pt-4 max-w-md w-full">
+
+                <div class="pt-4 max-w-md w-full mx-auto">
                     
                     <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
                     
@@ -118,25 +96,11 @@
                             style="width: 100%; height: 207px; margin: 0; border-radius: 0px !important; background-color: transparent; box-shadow: none;">
                     </iframe>
 
-                    <div class="flex items-center gap-3 mt-2 text-gray-400 text-sm font-sans justify-center md:justify-start">
-                        <div class="flex -space-x-2">
-                            <div class="w-6 h-6 rounded-full bg-brand-gold/20 border border-brand-gold flex items-center justify-center text-[8px] text-brand-gold">JM</div>
-                            <div class="w-6 h-6 rounded-full bg-brand-gold/30 border border-brand-gold flex items-center justify-center text-[8px] text-brand-gold">AL</div>
-                            <div class="w-6 h-6 rounded-full bg-brand-gold/40 border border-brand-gold flex items-center justify-center text-[8px] text-brand-gold">CS</div>
-                        </div>
+                    <div class="flex items-center justify-center gap-3 mt-2 text-gray-400 text-sm font-sans">
                         <p>Mais de <strong class="text-brand-gold">538 mulheres</strong> já recebem esse ritual.</p>
                     </div>
                 </div>
 
-                    <div class="flex items-center gap-3 mt-6 text-gray-400 text-sm font-sans justify-center md:justify-start">
-                        <div class="flex -space-x-2">
-                            <div class="w-6 h-6 rounded-full bg-brand-gold/20 border border-brand-gold flex items-center justify-center text-[8px] text-brand-gold">JM</div>
-                            <div class="w-6 h-6 rounded-full bg-brand-gold/30 border border-brand-gold flex items-center justify-center text-[8px] text-brand-gold">AL</div>
-                            <div class="w-6 h-6 rounded-full bg-brand-gold/40 border border-brand-gold flex items-center justify-center text-[8px] text-brand-gold">CS</div>
-                        </div>
-                        <p>Mais de <strong class="text-brand-gold">538 mulheres</strong> já recebem esse ritual.</p>
-                    </div>
-                </div>
             </div>
         </div>
         
@@ -145,7 +109,8 @@
         </div>
 
     </main>
-<script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+
+    <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 
 </body>
 </html>
